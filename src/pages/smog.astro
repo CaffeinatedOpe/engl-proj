@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import smog from "../assets/smog.jpg";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="p-4 flex items-center justify-center">
+		<h1 class="text-4xl bg-ctp-mantle p-8 rounded-2xl">Burnout</h1>
+	</div>
+	<div class="flex flex-row flex-1 items-center justify-center flex-wrap gap-16 bg-ctp-mantle m-8 p-8 rounded-2xl">
+		<div class="w-lg h-auto">
+			<Image
+				class="object-contain inline"
+				src={smog}
+				alt="Photo by Nataliya Vaitkevich from Pexels: https://www.pexels.com/photo/overworked-employee-lying-in-front-of-laptop-6837643/"
+			/>
+		</div>
+		<p class="text-xl">
+			Commuting to and from work not only takes time, but contributes to a large portion of the fatal crashes on the road. Out of all the states in the US, the
+			lowest portion of fatal crashes that were during commute hours was in Connecticut, with 20.8% of their fatal crashes taking place during commute hours.
+			That number climbs up to 29.6% in New Hampshire (Fatal Commuter Crashes). A well-implemented shortened workday could greatly improve these statistics. If
+			the workday was shorter, the shifts scheduled by different companies could be shuffled around, to lessen the spikes in traffic at certain times. This
+			would also lead to shorter commutes, as there would be fewer drivers on the road. With cars being a massive contributor to carbon emissions and pollution
+			(Car Harm), lowering the amount of time each car spends on the road would lead to a strong improvement in the amount of pollution being produced,
+			especially if implemented on a scale as large as the US. While public transit is an option in some areas, the systems are often exclusive to more urban
+			areas, with those in rural or suburban areas needing a car to get to and from work, if they can afford it (Transit Investment). In those urban areas, the
+			benefit would still be seen from more spread-out shifts, as trans cars and buses wouldn’t be crammed full, like they often are with the standard 8 hour
+			workday. While there were spikes in fatalities for both the morning and evening commute times, the evening commute times’ spike was much greater. This may
+			be partially attributed to drowsy driving, which led to 91,000 police reports and nearly 800 deaths in 2017 (Drowsy Driving). Drowsy driving isn’t
+			mentioned as often as driving under the influence, although the two have similar effects. After being awake for 17 hours , the level of impairment was
+			seen to be similar if not “equivalent to having a blood alcohol content (BAC) of .05. After 24 hours awake, impairment is equivalent to a BAC of .10”
+			(Driver Fatigue). While the 8 hour workday isn’t anywhere near 17 hours, even if the longest transport time and plenty of preparation in the morning are
+			assumed, the equivalence doesn’t take into account the degree of work done in those 17 hours. More mentally or physically taxing work may have a stronger
+			impact on the level of impairment, meaning that it’s possible for an 8 hour workday to cause enough impairment to adversely affect driving skills. A
+			shorter workday, even if the intensity of the work done is the same, would thus be less exhausting to the workers, leaving them in a safer state for the
+			possibly long drive home. Lessened traffic and more alert workers would make for much safer roads, and even improve the quality of public transportation
+			in places where it’s present.
+		</p>
+	</div>
+	<div class="flex items-center justify-center">
+		<a href="/" class="underline text-2xl bg-ctp-mantle p-4 rounded-2xl">back</a>
+	</div>
+	<div class="flex items-center justify-center">
+		<a href="/sweden" class="underline text-2xl bg-ctp-mantle p-4 rounded-2xl">next</a>
+	</div>
+</Layout>

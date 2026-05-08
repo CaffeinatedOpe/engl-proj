@@ -1,0 +1,47 @@
+pipeline {
+  agent {
+   	kubernetes {
+      yamlFile 'ci/pod.yaml'
+  	}
+  }
+	triggers {
+		pollSCM('H/5 * * * *')
+	}
+  stages {
+    stage('clone') {
+      steps {
+        container('buildkit') {
+					checkout(
+      			[$class: 'GitSCM',
+      			branches: [[name: "master"]],
+      			doGenerateSubmoduleConfigurations: true,
+      			extensions: scm.extensions + [[$class: 'SubmoduleOption', parentCredentials: true]],
+      			userRemoteConfigs: [[credentialsId: 'creds',
+      			url: 'https://github.com/CaffeinatedOpe/engl-proj']]]
+					)
+        }
+      }
+    }
+		stage('install dependencies') {
+			steps {
+				container ('node') {
+					sh'npm install'
+				}
+			}
+		}
+		stage('build') {
+			steps {
+				container('node') {
+					sh 'npm run build'
+				}
+			}
+		}
+    stage('package and push') {
+      steps {
+        container('buildkit') {
+	        sh 'buildctl-daemonless.sh build . --output type=image,name=codeberg.org/caffeinatedope/eng-proj,push=true,tag=$(date +%s) --frontend dockerfile.v0 --local context=. --local dockerfile=ci/.'
+        }
+      }
+    }
+  }
+}

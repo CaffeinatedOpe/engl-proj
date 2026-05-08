@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import sweden from "../assets/sweden.png";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="p-4 flex items-center justify-center">
+		<h1 class="text-4xl bg-ctp-mantle p-8 rounded-2xl">Burnout</h1>
+	</div>
+	<div class="flex flex-row flex-1 items-center justify-center flex-wrap gap-16 bg-ctp-mantle m-8 p-8 rounded-2xl">
+		<div class="w-lg h-auto">
+			<Image
+				class="object-contain inline"
+				src={sweden}
+				alt="Photo by Nataliya Vaitkevich from Pexels: https://www.pexels.com/photo/overworked-employee-lying-in-front-of-laptop-6837643/"
+			/>
+		</div>
+		<p class="text-xl">
+			Many people would assume that shortening the workday would mean a decrease in productivity per worker, and that the best way to increase productivity
+			would be to lengthen the workday. They might also assume that a lower number of hours worked would decrease revenue and profit. These assumptions are
+			incorrect, however. In Sweden, they used to stick to an 8 hour workday, similar to the current standard in America. However, due to workers being
+			overworked, and coming home exhausted, they began looking into other options. One of which was a shift from that 8 hour workday to a 6 hour workday,
+			keeping the same wages for the workers. What started out as an experiment initially was extremely successful, and actually increased productivity in many
+			areas. The workers get home earlier, and with enough time and energy to relax after work (Efficiency Up). While this example may be over a decade old, it
+			shows that simply lowering the number of hours worked doesn’t lower productivity, at least not to the same degree. The example from Sweden covers a wide
+			range of jobs, both in nursing homes and factories, showing that the benefit isn’t limited to one field or job. The companies that stuck to this schedule
+			also had better retention and more applicants, even when compared to better paying jobs (Efficiency Up). While the increase in productivity itself
+			provides plenty of draw towards the shorter schedule, the desire of the workers to work fewer hours than to receive better pay goes to show how impactful
+			this change of schedule can truly be. Those fewer hours could give workers with kids more time to spend with them, or give them more time to care for
+			their own health Of those interviewed, the workers expressed great appreciation for the shorter days, and brought up how it allows for much more of a
+			work-life balance than the traditional 8 hour schedule (Efficiency Up). Even if productivity were to go down, although it’s shown that it wouldn’t, the
+			benefits in the personal lives of the workers greatly outweigh the potential minor loss in productivity when anything other than money is taken into
+			consideration. Unfortunately, given the massive changes stemming from a shift in workday length, there aren’t many other studies showing the effects of
+			this change.
+		</p>
+	</div>
+	<div class="flex items-center justify-center">
+		<a href="/" class="underline text-2xl bg-ctp-mantle p-4 rounded-2xl">back</a>
+	</div>
+	<div class="flex items-center justify-center">
+		<a href="/burnout" class="underline text-2xl bg-ctp-mantle p-4 rounded-2xl">next</a>
+	</div>
+</Layout>

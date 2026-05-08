@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import burnout from "../assets/burnout.jpg";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="p-4 flex items-center justify-center">
+		<h1 class="text-4xl bg-ctp-mantle p-8 rounded-2xl">Burnout</h1>
+	</div>
+	<div class="flex flex-row flex-1 items-center justify-center flex-wrap gap-16 bg-ctp-mantle m-8 p-8 rounded-2xl">
+		<div class="w-lg h-auto">
+			<Image
+				class="object-contain inline"
+				src={burnout}
+				alt="Photo by Nataliya Vaitkevich from Pexels: https://www.pexels.com/photo/overworked-employee-lying-in-front-of-laptop-6837643/"
+			/>
+		</div>
+		<p class="text-xl">
+			A big issue with our current long hours is burnout. Long, boring, difficult hours in a job, or any task, can wear a person down, lessening their quality
+			of life. This can lead to workers feeling like their work has no value, doubting their abilities, and can even lead to physical issues like headaches and
+			stomach problems (Job Burnout). These can make working harder, and impact a person’s entire life, not just their work. While long hours aren’t simply
+			causing burnout themselves, they play a heavy factor when it comes to causing burnout, alongside a poor work-life balance, which can also be a result of
+			long work hours (Job Burnout). Some of the other issues stemming from burnout include heart disease, depression, insomnia, and can make workers more
+			susceptible to illness (Workplace Burnout). While some jobs do care about the mental health of their workers, there are often vast improvements that can
+			be made to prevent burnout, such as checking in and keeping track of workloads and workers to ensure they aren’t being overworked and overwhelmed
+			(Workplace Burnout). These causes and effects aren’t limited to any one type of job, although they may be more common in office jobs, due to the
+			repetition of monotonous tasks. Some of the common ways to counter burnout involve self care, prioritizing social relationships, and simply taking breaks
+			from anything related to work (Workplace Burnout). None of these things are difficult for the average person to do, but they all have the same issue of
+			taking time and energy to do. That is time and energy that might be missing for a lot of people, as all of their time is spent either working or sleeping.
+			Shortening the work day isn’t a perfect solution to all of these issues, but it would greatly benefit the lives of workers who might be dealing with
+			burnout. The extra 2 hours in the day could be used to meet with friends, who would also have more free time outside of work themselves. If a person is
+			short on sleep, they could devote the extra time to that. With people spending less time at work to begin with, they would be dealing with the stress of a
+			workplace for a much shorter amount of time, which would be a relief from a portion of the mental effects of their job. With there being less burnout to
+			counteract, and more time to counteract it, a slightly shorter workday would lead to a massive reduction in burnout for a huge number of workers.
+		</p>
+	</div>
+	<div class="flex items-center justify-center">
+		<a href="/" class="underline text-2xl bg-ctp-mantle p-4 rounded-2xl">back</a>
+	</div>
+	<div class="flex items-center justify-center">
+		<a href="/crashes" class="underline text-2xl bg-ctp-mantle p-4 rounded-2xl">next</a>
+	</div>
+</Layout>

@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from "astro:assets";
+import burnout from "../assets/burnout.jpg";
+import crashes from "../assets/crashes.png";
+import smog from "../assets/smog.jpg";
+import sweden from "../assets/sweden.png";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<div class="p-4 flex items-center justify-center">
+		<h1 class="text-4xl bg-ctp-mantle p-8 rounded-2xl">The Superior 6 Hour Workday</h1>
+	</div>
+	<div class="w-full flex flex-row flex-1 items-center justify-center flex-wrap p-8 gap-16">
+		<a href="/burnout" class="w-lg h-auto">
+			<Image class="object-contain inline" src={burnout} alt="Photo by Nataliya Vaitkevich from Pexels: https://www.pexels.com/photo/overworked-employee-lying-in-front-of-laptop-6837643/" />
+		</a>
+		<a href="/crashes" class="w-lg h-auto">
+			<Image class="object-contain inline" src={crashes} alt="Graph from injuryclaimcoach: https://www.injuryclaimcoach.com/fatal-commuter-crashes.html" />
+		</a>
+		<a href="/smog" class="w-lg h-auto">
+			<Image class="object-contain inline" src={smog} alt="Photo from rare-gallery: https://rare-gallery.com/5393262-smog-pollution-haze-city-skyline-aerial-silhouette-sunset-golden-golden-light-drone-view-from-above-aerial-view-reflection-sun-relfection-fog-river-cityscape-water-town-public-domain-images.html" />
+		</a>
+		<a href="/sweden" class="w-lg h-auto">
+			<Image class="object-contain inline" src={sweden} alt="The Swedish flag: https://en.wikipedia.org/wiki/Flag_of_Sweden" />
+		</a>
+	</div>
 </Layout>
