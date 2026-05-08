@@ -17,7 +17,7 @@ pipeline {
       			doGenerateSubmoduleConfigurations: true,
       			extensions: scm.extensions + [[$class: 'SubmoduleOption', parentCredentials: true]],
       			userRemoteConfigs: [[credentialsId: 'creds',
-      			url: 'https://github.com/CaffeinatedOpe/engl-proj']]]
+      			url: 'https://codeberg.org/CaffeinatedOpe/engl-proj']]]
 					)
         }
       }
